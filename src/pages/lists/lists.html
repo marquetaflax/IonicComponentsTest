@@ -1,0 +1,84 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Lists
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <!-- diretiva 'inset' é usada para a separação horizontal dos componentes contidos no container -->
+  <!-- a diretiva 'no-lines' faz com que as linhas separadoras não apareçam -->
+  <ion-list>
+
+    <!-- headers podem ser utilizados como divisores, colocando a divisória àcima do texto -->
+    <!-- dividers servem para dividir as listas, colocando as divisórias a baixo do texto-->
+    <ion-list-header>Numbers List</ion-list-header>
+    <ion-item-divider>Odd list</ion-item-divider>
+    <!-- para utilização de botões, a diretiva ion-item é necessária -->
+    <button ion-item>List item 1</button>
+    <button ion-item>List item 3</button>
+
+
+    <ion-item-divider>Pair list</ion-item-divider>
+    <button ion-item>List item 2</button>
+    <button ion-item>List item 4</button>
+  </ion-list>
+  <!-- ao adicionar icones, este vai para esquerda enquanto a opção vai à direita -->
+  <!-- a diretiva item-(start/end) inicializa/termina os elementos contidos neste 
+      item (na msm linha, movendo da esquerda-start para a direita-end) -->
+  <ion-item>
+    <ion-icon name="rose" item-start></ion-icon>
+    Rose
+    <button ion-button clear icon-only item-end>
+      <ion-icon name="leaf"></ion-icon>
+    </button>
+  </ion-item>
+
+  <ion-item>
+    <ion-icon name="logo-facebook" item-start></ion-icon>
+    Share on Facebook
+    <button ion-button clear icon-only item-end>
+      <ion-icon name="share"></ion-icon>
+    </button>
+  </ion-item>
+
+  <ion-list>
+    <ion-item>
+      <!-- a diretiva avatar faz com que o container de imagem seja um círculo -->
+      <ion-avatar item-end>
+        <img src="data:image/jpeg;base64,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" />
+      </ion-avatar>
+      <h2>Eis que</h2>
+      <p>A 10/10 irineu e xesque no bresque</p>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item>
+      <!-- a diretiva thumbnail faz com que o container de imagem fique um quadrado -->
+      <ion-thumbnail item-start>
+        <img src="https://i.ytimg.com/vi/xYTYQ32J_Eo/hqdefault.jpg" />
+      </ion-thumbnail>
+      <h2>Eis que</h2>
+      <p>Kk eae men</p>
+      <button ion-button item-end>Link</button>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <!-- sliding é um componente que permite que a tela deslize horizontalmente -->
+    <!-- permite que componentes sejam "escondidos" (só aparecem com o deslizar da tela) -->
+    <ion-item-sliding>
+      <ion-item>
+        Some items
+      </ion-item>
+      <ion-item-options>
+        <button ion-button color="danger">
+          Call
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

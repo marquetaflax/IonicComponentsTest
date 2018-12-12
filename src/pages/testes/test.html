@@ -1,0 +1,86 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Test Area</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <!-- o proposito do radiobutton é de nunca ser usado sozinho por permitir ao usuário
+            a escola entre um ou o outro -->
+  <!-- para que ocorra a escolha, usa-se a diretiva radio-group -->
+  <ion-list radio-group>
+
+    <ion-list-header>
+      <ion-label>The SAM is brabo?</ion-label>
+    </ion-list-header>
+    <ion-item>
+      <ion-label>Yes</ion-label>
+      <ion-radio checked="true"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Logic</ion-label>
+      <ion-radio></ion-radio>
+    </ion-item>
+  </ion-list>
+
+  <button ion-button block icon-left color="secondary">
+    <!-- ao colocar o icon-left, o icone fica com um espaçamento entre ele e o texto do botão -->
+    <ion-icon name="ios-beer"></ion-icon>
+    Chá verde
+  </button>
+  <!-- block é a diretiva para que o botão ocupe a tela horizontalmente -->
+  <!-- a diretiva de tamanho não funciona com ícones -->
+  <button ion-button large block icon-left color="dark">
+    <ion-icon color="danger" name="ios-game-controller-a"></ion-icon>
+    Play Game
+  </button>
+  <!-- outline é a diretiva para que o desenho do botão seja apenas seu contorno -->
+  <!-- clear é a diretiva que remove os contornos do botão / round deixa as pontas arredondadas-->
+
+  <ion-fab left bottom>
+    <button mini ion-fab>
+      <ion-icon name="add" color="dark"></ion-icon>
+    </button>
+  </ion-fab>
+
+  <ion-fab center bottom>
+    <button mini ion-fab>
+      <ion-icon name="share"></ion-icon>
+    </button>
+    <!-- fablist é um botão expanível que contém uma lista de botões dentro. -->
+    <!-- um problema encontrado, é que sua expansão ocorre para baixo do botão selecionado,
+    necessitando de uma mudança para que sua expansão não cause este tipo de problema -->
+    <ion-fab-list side="top">
+      <button ion-fab>
+        <ion-icon name="logo-facebook"></ion-icon>
+      </button>
+      <button ion-fab>
+        <ion-icon name="logo-twitter"></ion-icon>
+      </button>
+      <button ion-fab>
+        <ion-icon name="logo-googleplus"></ion-icon>
+      </button>
+    </ion-fab-list>
+  </ion-fab>
+
+  <ion-item>
+    <ion-label>
+      Select an item
+    </ion-label>
+    <!-- ion select é um dropdownlist -->
+    <!-- a diretiva interface é o modo de como a ação do select 
+      aparecerá (action-sheet / popover / alert) -->
+
+    <!-- a diretiva multiple permite que mais de um valor seja selecionado -->
+    <!-- as diretivas cancelText e okText mudam o texto dos campos Cancel e Ok, respectivamente -->
+    <ion-select interface="action-sheet">
+      <ion-option>One Piece</ion-option>
+      <ion-option>Nanatsu no Taizai</ion-option>
+      <ion-option>Pocket Monster</ion-option>
+    </ion-select>
+    
+  </ion-item>
+
+</ion-content>

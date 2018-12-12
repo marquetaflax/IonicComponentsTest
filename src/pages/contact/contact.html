@@ -1,17 +1,49 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>
       Contact
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content>
-  <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
-    </ion-item>
-  </ion-list>
+<ion-content padding>
+
+  <ion-card>
+    <ion-card-header color="danger">
+      Ionic Card
+    </ion-card-header>
+    <img src="https://res.cloudinary.com/teepublic/image/private/s--2zjMvP1B--/t_Preview/b_rgb:000000,c_limit,f_jpg,h_630,q_90,w_630/v1532315279/production/designs/2925674_0.jpg" />
+    <ion-card-content>
+      This is an Ionic Card. It can be used to display any content, including pictures.
+    </ion-card-content>
+  </ion-card>
+
+  <!-- grid permite a organização em forma de tabela dos componentes visuais em uma tela -->
+  <ion-grid>
+    <ion-row>
+      <!-- diretiva col é a especificação da largura da coluna -->
+      <ion-col col-6>
+        Column n. 1
+      </ion-col>
+      <ion-col>
+        Column n. 2
+      </ion-col>
+      <ion-col>
+        Column n. 3
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+        <ion-col col-12>
+          Column n. 4
+        </ion-col>
+        <ion-col>
+          Column n. 5
+        </ion-col>
+        <ion-col>
+          Column n. 6
+        </ion-col>
+      </ion-row>
+  </ion-grid>
+
 </ion-content>
