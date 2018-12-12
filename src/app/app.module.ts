@@ -1,3 +1,5 @@
+import { PopoverPage } from './../pages/popover/popover';
+import { ModalPage } from './../pages/modal/modal';
 import { ContactPage } from './../pages/contact/contact';
 import { ListPage } from './../pages/lists/lists';
 import { LoginPage } from './../pages/login/login';
@@ -19,6 +21,8 @@ import { TestPage } from '../pages/testes/test';
     LoginPage,
     TabsPage,
     ContactPage,
+    ModalPage,
+    PopoverPage,
   ],
   imports: [
     BrowserModule,
@@ -27,11 +31,13 @@ import { TestPage } from '../pages/testes/test';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+    PopoverPage,
     ListPage,
     TestPage,
     LoginPage,
     ContactPage,
-    TabsPage
+    TabsPage,
+    ModalPage,
   ],
   providers: [
     StatusBar,

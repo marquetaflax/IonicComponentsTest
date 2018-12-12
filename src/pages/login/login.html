@@ -3,6 +3,11 @@
         <ion-title>
             Login
         </ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="presentPopover($event)">
+                <ion-icon name="more"></ion-icon>
+            </button>
+        </ion-buttons>
     </ion-navbar>
 </ion-header>
 <ion-content padding>
@@ -12,24 +17,83 @@
         <!-- floating é uma diretiva que ao interagir com o campo, a label tem uma animação de 
             ir para o topo do input (fazer sem ter um placeholder) -->
         <ion-label floating>Username</ion-label>
-        <ion-input type="text"></ion-input>
+        <!-- ngModel faz o link da varável no .ts com o valor passado no html -->
+        <ion-input type="text" [(ngModel)]="username"></ion-input>
     </ion-item>
     <ion-item>
         <ion-label floating>Password</ion-label>
-        <ion-input type="password"></ion-input>
+        <ion-input type="password" [(ngModel)]="password"></ion-input>
     </ion-item>
 
     <ion-item>
         <ion-label>Remember me</ion-label>
         <!-- para declarar valores default para o checkbox, usa-se a diretive 'checked' 
             (aceitando true ou false) dependendo da situação-->
-        <ion-checkbox></ion-checkbox>
+        <ion-checkbox [(ngModel)]="rememberPassword"></ion-checkbox>
         <!-- checkbox são colocadas à esquerda por default, enquanto os radiobuttons são
             colocados à direita -->
     </ion-item>
 
-    <button ion-button block round color="primary">
-        Login
-    </button>
+    <ion-item>
+        <ion-label>
+            User Type
+        </ion-label>
 
+        <ion-select [(ngModel)]="userType">
+            <ion-option values="admin">Admin</ion-option>
+            <ion-option values="user">User</ion-option>
+        </ion-select>
+    </ion-item>
+
+    <ion-grid>
+        <ion-row>
+            <ion-col col-6>
+                <!-- a diretiva block permite que o botão fique com o tamanho horizontal do componente em que 
+                    está inserido -->
+                <button ion-button block color="primary" (click)="login()">
+                    Login
+                </button>
+            </ion-col>
+            <ion-col col-6>
+                <button ion-button block outline (click)="cancel()">
+                    Cancel
+                </button>
+            </ion-col>
+
+            <ion-col>
+                <button ion-button block outline color="danger" (click)="alert()">
+                    Alert
+                </button>
+            </ion-col>
+
+            <ion-col>
+                <button ion-button block outline color="secondary" (click)="toast()">
+                    Toast
+                </button>
+            </ion-col>
+
+        </ion-row>
+
+        <ion-row>
+            <ion-col>
+                <button ion-button block outline (click)="actionSheet()">
+                    ActionSheet
+                </button>
+            </ion-col>
+            <ion-col>
+                <button ion-button block outline (click)="goToContact()">
+                    Go to ContactPage
+                </button>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col>
+                <button ion-button block outline (click)="openModal()">
+                    Open Modal
+                </button>
+            </ion-col>
+        </ion-row>
+
+    </ion-grid>
 </ion-content>
